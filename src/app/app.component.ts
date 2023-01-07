@@ -9,4 +9,5 @@ export class AppComponent  {
   name = 'Angular ' + VERSION.major;
   isWarning = true;
   isDanger = true;
+  classes = 'box red-border'
 }

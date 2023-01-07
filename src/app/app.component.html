@@ -1,4 +1,24 @@
 <hello name="{{ name }}"></hello>
-<div class="box" [class]="{'red-border': isDanger}"></div>
-<button (click) = "isDanger = !isDanger">Toggle Danger</button>
-<div class="box yellow-border"></div>
+<div class="box" [class]="{ 'red-border': isDanger }"></div>
+<button (click)="isDanger = !isDanger">Toggle Danger</button>
+
+<!-- 
+  [style.tenStyle] 
+  [style.ten-style]
+  [style.tem-style.unit]
+  [style] = 'obeject'
+ -->
+<div
+  class="box"
+  [style.background-color]="isWarning ? 'yellow' : 'red'"
+  [style]="
+    isWarning
+      ? { width: '300px', height: '300px' }
+      : { width: '100px', height: '100px' }
+  "
+  [style.color]="'green'"
+>
+  hello
+</div>
+<button (click)="isWarning = !isWarning">Toggle isWarning</button>
+<!-- khuyến khích sử dụng  [class] hơn [ngClass] vì không phải thông qua nhiều logic như ngClass -->
