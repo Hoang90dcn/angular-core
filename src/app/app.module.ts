@@ -7,6 +7,7 @@ import { HelloComponent } from './hello.component';
 import { ProgressBarComponent } from './progress-bar/progress-bar.component';
 import { AuthorDetailComponent } from './author-detail/author-detail.component';
 import { AuthorListComponent } from './author-list/author-list.component';
+import { ToggleComponent } from './toggle/toggle.component';
 
 @NgModule({
   imports: [BrowserModule, FormsModule],
@@ -16,6 +17,7 @@ import { AuthorListComponent } from './author-list/author-list.component';
     ProgressBarComponent,
     AuthorDetailComponent,
     AuthorListComponent,
+    ToggleComponent,
   ],
   bootstrap: [AppComponent],
 })

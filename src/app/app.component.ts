@@ -11,4 +11,5 @@ export class AppComponent  {
   isDanger = true;
   classes = 'box red-border'
   progress = 80;
+  isChecked = true;
 }

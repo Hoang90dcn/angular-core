@@ -38,4 +38,10 @@
 
 <!-- day8 -->
 <!-- Component interaction output binding -->
-<app-author-list></app-author-list>
+<!-- <app-author-list></app-author-list> -->
+
+<!-- day 9 -->
+<!-- custom data binding -->
+<div>name {{ name }}</div>
+<input type="text" [ngModel]="name" (ngModelChange)="name = $event" />
+<app-toggle [(checked)]="isChecked"></app-toggle>
