@@ -1,6 +1,6 @@
-<hello name="{{ name }}"></hello>
+<!-- <hello name="{{ name }}"></hello>
 <div class="box" [class]="{ 'red-border': isDanger }"></div>
-<button (click)="isDanger = !isDanger">Toggle Danger</button>
+<button (click)="isDanger = !isDanger">Toggle Danger</button> -->
 
 <!-- 
   [style.tenStyle] 
@@ -8,7 +8,7 @@
   [style.tem-style.unit]
   [style] = 'obeject'
  -->
-<div
+<!-- <div
   class="box"
   [style.background-color]="isWarning ? 'yellow' : 'red'"
   [style]="
@@ -20,5 +20,17 @@
 >
   hello
 </div>
-<button (click)="isWarning = !isWarning">Toggle isWarning</button>
+<button (click)="isWarning = !isWarning">Toggle isWarning</button> -->
 <!-- khuyến khích sử dụng  [class] hơn [ngClass] vì không phải thông qua nhiều logic như ngClass -->
+
+<!-- COMPONENT INTERACTION -->
+<app-progress-bar></app-progress-bar>
+<br />
+<app-progress-bar
+  [progress]="progress"
+  [backgroundColor]="'blue'"
+  [progressColor]="'#2e8b57'"
+>
+</app-progress-bar>
+
+<button (click) = "progress =  progress +1">Increase</button>

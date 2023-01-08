@@ -10,4 +10,5 @@ export class AppComponent  {
   isWarning = true;
   isDanger = true;
   classes = 'box red-border'
+  progress = 80;
 }
