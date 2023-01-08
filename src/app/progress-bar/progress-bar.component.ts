@@ -2,6 +2,7 @@ import {
   Component,
   Input,
   OnChanges,
+  OnDestroy,
   OnInit,
   SimpleChanges,
 } from '@angular/core';
@@ -11,7 +12,7 @@ import {
   templateUrl: './progress-bar.component.html',
   styleUrls: ['./progress-bar.component.css'],
 })
-export class ProgressBarComponent implements OnInit, OnChanges {
+export class ProgressBarComponent implements OnInit, OnChanges, OnDestroy {
   @Input() backgroundColor: string = '#dcdde1';
   @Input() progressColor: string = '#273c75';
   private _progress = 20;
@@ -31,6 +32,7 @@ export class ProgressBarComponent implements OnInit, OnChanges {
       backgroundColorl: this.backgroundColor,
     });
   }
+
   ngOnChanges(changes: SimpleChanges): void {
     console.log(`onChanges`, {
       progressColor: this.progressColor,
@@ -44,5 +46,8 @@ export class ProgressBarComponent implements OnInit, OnChanges {
       progress: this.progress,
       backgroundColorl: this.backgroundColor,
     });
+  }
+  ngOnDestroy(): void {
+    // throw new Error('Method not implemented.');
   }
 }
